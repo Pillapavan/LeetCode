@@ -15,7 +15,7 @@ public class SplitTheArray {
         int ans=0;
         while(start<end){
             int mid=start+(end-start)/2;
-            if(findpieces(nums,mid,k)){
+            if(findPieces(nums,mid,k)){
                 ans=mid;
                 end=mid;
             }else{
@@ -24,7 +24,7 @@ public class SplitTheArray {
         }
         return ans;
     }
-    public static boolean findpieces(int[] nums,int max,int k){
+    public static boolean findPieces(int[] nums, int max, int k){
         int sum=0;
         int pieces=1;
         for (int num:nums) {

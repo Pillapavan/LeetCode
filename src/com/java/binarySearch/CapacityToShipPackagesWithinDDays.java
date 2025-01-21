@@ -9,8 +9,12 @@ public class CapacityToShipPackagesWithinDDays {
         System.out.println(shipWithinDays(weights,5));
     }
     public static int shipWithinDays(int[] weights, int days) {
-        int start =  Arrays.stream(weights).max().getAsInt();;
-        int end= Arrays.stream(weights).sum();
+        int start=0;
+        int end=0;
+        for (int weight : weights) {
+            start = Math.max(start, weight);
+            end += weight;
+        }
         int capacity=0;
         while(start<=end){
             int mid=start+(end-start)/2;
