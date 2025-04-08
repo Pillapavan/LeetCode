@@ -25,10 +25,10 @@ public class FindPeakIndex {
         while(start<end){
             int mid=start+(end-start)/2;
             int pMid=mid;
-            while(pMid<end-1 && arr[pMid]==arr[pMid+1]){
+            while(pMid<end && arr[pMid]==arr[pMid+1]){
                 pMid++;
             }
-            if(start!=end-1 && pMid==end-1){
+            if(start!=end-1 && pMid==end){
                 end=mid;
             }
             else if(arr[pMid]>arr[pMid+1]){
