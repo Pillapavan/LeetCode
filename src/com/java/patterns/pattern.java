@@ -2,7 +2,7 @@ package com.java.patterns;
 
 public class pattern {
     public static void main(String[] args) {
-        pattern33(4);
+        pattern34(4);
     }
 
     public static void pattern1(int n) {
@@ -700,6 +700,29 @@ public class pattern {
 
 
 
+    // Hollow pattern
+
+    public static void pattern34(int n){
+        for (int i = 1; i < 2*n; i++) {
+            int count = i > n ? 2*n-i:i;
+            for (int j = 0; j < count; j++) {
+                if(j==0 || j+1==count)
+                     System.out.print(count+ " ");
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+//    Hollow printing
+//            1
+//            2 2
+//            3  3
+//            4   4
+//            3  3
+//            2 2
+//            1
 
 
 
